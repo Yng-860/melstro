@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="rus">
+    <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles.css">    
+    <title>проектик</title>
+    </head>
+    <body>
+    <body>
+  <div class="slideshow">
+    <div class="slide"></div>
+    <div class="slide"></div>
+    <div class="slide"></div>
+    <div class="slide"></div>
+    <div class="slide"></div>
+    <div class="slide"></div>
+
+    <div class="box">
+      <video id="myVideo" muted  autoplay playsinline>
+        <source src="IMG_3455.MP4" type="video/mp4">
+        Ваш браузер не поддерживает видео.
+      </video>
+    </div>
+  </div>
+
+  <script>
+    const box = document.querySelector('.box');
+    const video = document.getElementById('myVideo');
+   
+   
+    box.addEventListener('animationend', () => {
+      video.play();
+    });
+    video.addEventListener('canplay', () => {
+    box.addEventListener('animationend', () => {
+        video.play();
+    });
+});
+  </script>
+  </div>
+    </body>
+</html>
